@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="default"
+		module="hello-scaloid-sbt_2.10"
+		revision="0.1-SNAPSHOT"
+		conf="compile-internal"
+		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
+		date="20131008105855"/>
+	<dependencies>
+		<module organisation="org.scaloid" name="scaloid_2.10">
+			<revision name="2.4-8" status="release" pubdate="20130820231539" resolver="public" artresolver="public" homepage="http://jsuereth.com/scala-arm" downloaded="true" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="1">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="successful" details="" size="1845" time="1126" location="/Users/marciogm/.ivy2/cache/org.scaloid/scaloid_2.10/ivy-2.4-8.xml" searched="true" original-local-location="/Users/marciogm/.ivy2/cache/org.scaloid/scaloid_2.10/ivy-2.4-8.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scaloid/scaloid_2.10/2.4-8/scaloid_2.10-2.4-8.pom"/>
+				<caller organisation="default" name="hello-scaloid-sbt_2.10" conf="optional, compile, provided, compile-internal" rev="2.4-8" rev-constraint-default="2.4-8" rev-constraint-dynamic="2.4-8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="scaloid_2.10" type="jar" ext="jar" status="successful" details="" size="1965121" time="11390" location="/Users/marciogm/.ivy2/cache/org.scaloid/scaloid_2.10/jars/scaloid_2.10-2.4-8.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/scaloid/scaloid_2.10/2.4-8/scaloid_2.10-2.4-8.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-library">
+			<revision name="2.10.3" status="release" pubdate="20130927064454" resolver="public" artresolver="public" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.10.3/" downloaded="true" searched="true" default="false" conf="default(compile), default, compile, runtime, master, master(*), compile(*), runtime(*)" position="0">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html
+         "/>
+				<metadata-artifact status="successful" details="" size="2044" time="1204" location="/Users/marciogm/.ivy2/cache/org.scala-lang/scala-library/ivy-2.10.3.xml" searched="true" original-local-location="/Users/marciogm/.ivy2/cache/org.scala-lang/scala-library/ivy-2.10.3.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.3/scala-library-2.10.3.pom"/>
+				<caller organisation="org.scaloid" name="scaloid_2.10" conf="default, compile, runtime, master" rev="2.10.2" rev-constraint-default="2.10.2" rev-constraint-dynamic="2.10.2" callerrev="2.4-8"/>
+				<caller organisation="default" name="hello-scaloid-sbt_2.10" conf="optional, compile, provided, compile-internal" rev="2.10.3" rev-constraint-default="2.10.3" rev-constraint-dynamic="2.10.3" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="scala-library" type="jar" ext="jar" status="successful" details="" size="7126003" time="32100" location="/Users/marciogm/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.3.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.3/scala-library-2.10.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+			<revision name="2.10.2" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="-1">
+				<evicted-by rev="2.10.3"/>
+				<caller organisation="org.scaloid" name="scaloid_2.10" conf="default, compile, runtime, master" rev="2.10.2" rev-constraint-default="2.10.2" rev-constraint-dynamic="2.10.2" callerrev="2.4-8"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>

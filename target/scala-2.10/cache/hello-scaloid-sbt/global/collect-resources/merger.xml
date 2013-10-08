@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger>
+
+    <dataSet config="/Users/marciogm/work/planobe/mobile/hello-scaloid-sbt/res" >
+        <source path="/Users/marciogm/work/planobe/mobile/hello-scaloid-sbt/res" >
+            <file
+                path="/Users/marciogm/work/planobe/mobile/hello-scaloid-sbt/res/values/strings.xml"
+                qualifiers="" >
+                <string name="app_name" >Hello Scaloid! for sbt
+                </string>
+                <string name="red" >Red alert!
+                </string>
+            </file>
+        </source>
+    </dataSet>
+    <dataSet config="/Users/marciogm/work/planobe/mobile/hello-scaloid-sbt/res" >
+        <source path="/Users/marciogm/work/planobe/mobile/hello-scaloid-sbt/res" >
+            <file
+                path="/Users/marciogm/work/planobe/mobile/hello-scaloid-sbt/res/values/strings.xml"
+                qualifiers="" >
+                <string name="app_name" >Hello Scaloid! for sbt
+                </string>
+                <string name="red" >Red alert!
+                </string>
+            </file>
+        </source>
+    </dataSet>
+
+</merger>

@@ -1,0 +1,9 @@
+[0m[[0minfo[0m] [0mGenerating R.java[0m
+[0m[[0mdebug[0m] [0mAll libs: List()[0m
+[0m[[0mdebug[0m] [0mAll packages: List()[0m
+[0m[[0mdebug[0m] [0mpackageForR: org.scaloid.hello[0m
+[0m[[0mdebug[0m] [0mproguard.txt: /Users/marciogm/work/planobe/mobile/hello-scaloid-sbt/bin/proguard.txt[0m
+[0m[[0mdebug[0m] [0mIn modified: Set(/Users/marciogm/work/planobe/mobile/hello-scaloid-sbt/bin/AndroidManifest.xml)[0m
+[0m[[0mdebug[0m] [0mInRemoved: Set()[0m
+[0m[[0mdebug[0m] [0mOut checked: Set(/Users/marciogm/work/planobe/mobile/hello-scaloid-sbt/gen/org/scaloid/hello/R.java)[0m
+[0m[[0mdebug[0m] [0mOut modified: Set()[0m

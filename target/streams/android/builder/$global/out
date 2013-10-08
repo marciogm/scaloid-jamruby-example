@@ -1,0 +1,16 @@
+[0m[[0mdebug[0m] [0mCustom package for R class: 'org.scaloid.hello'[0m
+[0m[[0mdebug[0m] [0mcommand: /usr/local/opt/android-sdk/build-tools/17.0.0/aapt package -f --no-crunch -I /usr/local/opt/android-sdk/platforms/android-8/android.jar -M /Users/marciogm/work/planobe/mobile/hello-scaloid-sbt/bin/AndroidManifest.xml -S /Users/marciogm/work/planobe/mobile/hello-scaloid-sbt/bin/resources/res -A /Users/marciogm/work/planobe/mobile/hello-scaloid-sbt/bin/assets -m -J /Users/marciogm/work/planobe/mobile/hello-scaloid-sbt/gen -G /Users/marciogm/work/planobe/mobile/hello-scaloid-sbt/bin/proguard.txt --debug-mode --custom-package org.scaloid.hello[0m
+[0m[[0mdebug[0m] [0mDex library inputs: [/Users/marciogm/.ivy2/cache/org.scaloid/scaloid_2.10/jars/scaloid_2.10-2.4-8.jar, /Users/marciogm/work/planobe/mobile/hello-scaloid-sbt/bin/classes.jar, /Users/marciogm/work/planobe/mobile/hello-scaloid-sbt/libs/jamruby.jar, /Users/marciogm/work/planobe/mobile/hello-scaloid-sbt/target/scala-2.10/cache/hello-scaloid-sbt/global/proguard_cache/proguard-cache-c230ac8f910e3a67c5d6a874b82d221f6294c7b9.jar][0m
+[0m[[0mdebug[0m] [0mcommand: /usr/local/opt/android-sdk/build-tools/17.0.0/dx -JXmx1024m --dex --incremental --no-strict --output /Users/marciogm/work/planobe/mobile/hello-scaloid-sbt/bin/classes.dex /Users/marciogm/.ivy2/cache/org.scaloid/scaloid_2.10/jars/scaloid_2.10-2.4-8.jar /Users/marciogm/work/planobe/mobile/hello-scaloid-sbt/bin/classes.jar /Users/marciogm/work/planobe/mobile/hello-scaloid-sbt/libs/jamruby.jar /Users/marciogm/work/planobe/mobile/hello-scaloid-sbt/target/scala-2.10/cache/hello-scaloid-sbt/global/proguard_cache/proguard-cache-c230ac8f910e3a67c5d6a874b82d221f6294c7b9.jar[0m
+[0m[[0mdebug[0m] [0mResult compacted from 5991.9KiB to 3497.9KiB to save 2494.0KiB[0m
+[0m[[0mdebug[0m] [0mMerged dex A (10 defs/18.7KiB) with dex B (1395 defs/4450.8KiB). Result is 1395 defs/3497.9KiB. Took 2.5s[0m
+[0m[[0mdebug[0m] [0mPackaging hello-scaloid-sbt-debug-unaligned.apk[0m
+[0m[[0mdebug[0m] [0m/Users/marciogm/work/planobe/mobile/hello-scaloid-sbt/bin/resources-debug.ap_:[0m
+[0m[[0mdebug[0m] [0m=> AndroidManifest.xml[0m
+[0m[[0mdebug[0m] [0m=> resources.arsc[0m
+[0m[[0mdebug[0m] [0m/Users/marciogm/work/planobe/mobile/hello-scaloid-sbt/bin/classes.dex => classes.dex[0m
+[0m[[0mdebug[0m] [0m/Users/marciogm/.ivy2/cache/org.scaloid/scaloid_2.10/jars/scaloid_2.10-2.4-8.jar:[0m
+[0m[[0mdebug[0m] [0m/Users/marciogm/work/planobe/mobile/hello-scaloid-sbt/libs/jamruby.jar:[0m
+[0m[[0mdebug[0m] [0mNative folder: /Users/marciogm/work/planobe/mobile/hello-scaloid-sbt/bin/jni[0m
+[0m[[0mdebug[0m] [0m/Users/marciogm/work/planobe/mobile/hello-scaloid-sbt/bin/jni/armeabi/libjamruby.so => lib/armeabi/libjamruby.so[0m
+[0m[[0mdebug[0m] [0m/Users/marciogm/work/planobe/mobile/hello-scaloid-sbt/bin/jni/armeabi-v7a/libjamruby.so => lib/armeabi-v7a/libjamruby.so[0m

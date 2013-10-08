@@ -1,0 +1,4 @@
+[0m[[0mdebug[0m] [0mFiltering compile:dependency-classpath from: List(Attributed(/Users/marciogm/work/planobe/mobile/hello-scaloid-sbt/libs/jamruby.jar), Attributed(/Users/marciogm/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.3.jar), Attributed(/Users/marciogm/.ivy2/cache/org.scaloid/scaloid_2.10/jars/scaloid_2.10-2.4-8.jar))[0m
+[0m[[0mdebug[0m] [0mjamruby.jar => None: None[0m
+[0m[[0mdebug[0m] [0mscala-library-2.10.3.jar => Some(compile-internal): Some(org.scala-lang:scala-library:2.10.3 ())[0m
+[0m[[0mdebug[0m] [0mscaloid_2.10-2.4-8.jar => Some(compile-internal): Some(org.scaloid:scaloid_2.10:2.4-8)[0m
