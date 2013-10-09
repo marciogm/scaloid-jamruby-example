@@ -19,15 +19,12 @@ class HelloScaloid extends SActivity {
         case v => v.backgroundColor(Color.YELLOW)
       }
 	  
-	  val jamruby = new Jamruby
-	  val parse = jamruby.parse("a = 1")
-	  val str_ary = new java.lang.String
-	  val ret = jamruby.run(parse)
+	  val jamruby: Jamruby = new Jamruby
+	  val parse: ParserState = jamruby.parse("a = 1")		  
+	  val ret: Value = jamruby.run(parse)
+	  val res = ret.toString(jamruby.state())
 
-      STextView("I am 10 dip tall")
-      STextView("Me too")
-      STextView("I am taller than you") textSize 15.dip // overriding
-      SEditText("Yellow input field")
+      STextView(s"$res")
       SButton(R.string.red)
     } padding 20.dip
   }
