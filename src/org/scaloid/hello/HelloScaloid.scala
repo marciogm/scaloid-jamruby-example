@@ -1,32 +1,88 @@
 package org.scaloid.hello
-
+ 
 import org.scaloid.common._
 import android.graphics.Color
-
-// the mruby and jamruby related
-import org.jamruby.core.Jamruby;
-import org.jamruby.mruby.MRuby;
-import org.jamruby.mruby.ParserState;
-import org.jamruby.mruby.Value;
-
+import java.io.File
+import java.io.FileFilter
+ 
+import org.jamruby.core.Jamruby
+import org.jamruby.mruby.MRuby
+import org.jamruby.mruby.ParserState
+import org.jamruby.mruby.Value
+ 
+object TestScalaObject extends HelloScaloid with SContext with SActivity {
+	val TEST_SYMBOL = "*"
+	var ctx :SVerticalLayout = _;
+	
+	override def onCreate() {
+		startActivity[HelloScaloid]
+	}
+	
+	def SetContext(c : SVerticalLayout) = {
+		ctx = c
+	}
+	
+	def GetContext() : SVerticalLayout = {
+		ctx
+	}
+	
+	def testMethod(ctxx :SVerticalLayout) : String = {
+		toast("marcio")
+	}
+}
+ 
 class HelloScaloid extends SActivity {
-
-  onCreate {
+ 
+  onCreate {	
     contentView = new SVerticalLayout {
       style {
-        case b: SButton => b.textColor(Color.RED).onClick(toast("Bang!"))
+        // case b: SButton => b.textColor(Color.RED).onClick(loading())
         case t: STextView => t textSize 10.dip
         case v => v.backgroundColor(Color.YELLOW)
       }
+	
+	  TestScalaObject.SetContext(this)
 	  
-	  val jamruby: Jamruby = new Jamruby
-	  val parse: ParserState = jamruby.parse("a = 1")		  
-	  val ret: Value = jamruby.run(parse)
-	  val res = ret.toString(jamruby.state())
-
-      STextView(s"$res")
+	  
+	  
+	  
+	  // javap -s -bootclasspath classes.jar -classpath bin/classes org.scaloid.common.SToast
+	  
+  	  // W/dalvikvm(10144): JNI WARNING: can't call Landroid/widget/Toast;.makeText on instance of Lorg/scaloid/hello/HelloScaloid$$anonfun$2$$anon$1;
+  	  // W/dalvikvm(10144):              in Lorg/jamruby/mruby/MRuby;.n_run:(JJLorg/jamruby/mruby/Value;)Lorg/jamruby/mruby/Value; (CallObjectMethodA)
+  
+  	  // var code = """c = JAVA.find_class("org/scaloid/hello/TestScalaObject")
+  	  // 				sm = c.get_static_method("GetContext","()Lorg/scaloid/common/SVerticalLayout;")
+  	  // 					o = c.call_static(sm)
+  	  // 					to = JAVA.find_class("android/widget/Toast")
+  	  // 					im = to.get_static_method("makeText","(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;")
+  	  // 					r = to.call(o,im,"Hello, Ruby!",100)
+  	  // 
+	  
+	  var code = """c = JAVA.find_class("org/scaloid/hello/HelloScaloid")
+	  				sm = c.get_static_method("testMethod","()Ljava/lang/String;")
+	  				a = c.call_static(sm)
+					"""
+		  
+	  var jamRuby: Jamruby = new Jamruby()
+	  var ps: ParserState = jamRuby.parse(code)
+	  var ret: Value = jamRuby.run(ps)
+     
+	  STextView(ret.toString(jamRuby.state()))
+      STextView("Me too")
+      STextView("I am taller than you") textSize 15.dip // overriding
+      SEditText("Yellow input field")
       SButton(R.string.red)
     } padding 20.dip
   }
-
+  
+  def coolToast():String= {
+  		toast("carai")
+  		"lol"
+  	}
+  
+  // def findRubyFile(): Seq[File] = {
+  // 	  val finder: PathFinder = ("aa" / "ruby") ** "*.rb"
+  // 	  finder.get
+  // }
 }
