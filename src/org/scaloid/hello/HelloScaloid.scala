@@ -15,24 +15,28 @@ import org.jamruby.mruby.MRuby
 import org.jamruby.mruby.ParserState
 import org.jamruby.mruby.Value
  
-object TestScalaObject extends HelloScaloid {
-	val TEST_SYMBOL = "*"
-	override implicit val ctx = this
-	
-	// def SetContext(c : Context) = {
-	// 	ctx = c
-	// }
-	// 
-	// def GetContext() : Context = {
-	// 	ctx
-	// }
-	
-	def testMethod() = {
-		toast("marcio")
-	}
-}
+
  
 class HelloScaloid extends SActivity {
+	
+	object TestScalaObject {
+		// val TEST_SYMBOL = "*"
+		// override def basis = this
+		// override implicit val ctx = this
+	
+		// def SetContext(c : Context) = {
+		// 	ctx = c
+		// }
+		// 
+		// def GetContext() : Context = {
+		// 	ctx
+		// }
+	
+		def testMethod() = {
+			toast("marcio")
+			"lol"
+		}
+	}
  
   onCreate {	
 	// TestScalaObject.SetContext(this)
@@ -62,7 +66,7 @@ class HelloScaloid extends SActivity {
 	  // 				sm = c.get_static_method("testMethod","()Ljava/lang/String;")
 	  // 				a = c.call_static(sm)
 	  // 					"""
-		  
+	  // 		  
 	  // var jamRuby: Jamruby = new Jamruby()
 	  // var ps: ParserState = jamRuby.parse(code)
 	  // var ret: Value = jamRuby.run(ps)
