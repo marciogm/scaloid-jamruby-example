@@ -14,22 +14,12 @@ import org.jamruby.core.Jamruby
 import org.jamruby.mruby.MRuby
 import org.jamruby.mruby.ParserState
 import org.jamruby.mruby.Value
- 
-object CallUIMethodsFromClass extends HelloScaloid {
-	// val TEST_SYMBOL = "*"
-	// override def basis = this
-	// override implicit val ctx = this
 
-	// def SetContext(c : Context) = {
-	// 	ctx = c
-	// }
-	// 
-	// def GetContext() : Context = {
-	// 	ctx
-	// }
 
-	def callToast() : Unit = {
-		showToast()
+object CallUIMethodsFromClass {
+	
+	def callToast(implicit activity: Activity) = {
+		toast("It's works! :D")
 	}
 }
 
@@ -43,25 +33,23 @@ class HelloScaloid extends SActivity {
         case v => v.backgroundColor(Color.YELLOW)
       }  
 	  
-	  var code = """c = JAVA.find_class("org/scaloid/hello/CallUIMethodsFromClass")
-	  				sm = c.get_static_method("callToast","()V")
-	  				"""
-	  		  
-	  var jamRuby: Jamruby = new Jamruby()
-	  var ps: ParserState = jamRuby.parse(code)
-	  var ret: Value = jamRuby.run(ps)
-	  //      
+	  // var code = """c = JAVA.find_class("org/scaloid/hello/CallUIMethodsFromClass")
+	  // 				sm = c.get_static_method("callToast","()V")
+	  // 					a = c.call_static(sm)
+	  // 				"""
+	  // 		  
+	  // var jamRuby: Jamruby = new Jamruby()
+	  // var ps: ParserState = jamRuby.parse(code)
+	  // var ret: Value = jamRuby.run(ps)
 	  
-	  STextView(ret.toString(jamRuby.state()))
+	  
+	  CallUIMethodsFromClass.callToast	  
+	  
+	  // STextView(ret.toString(jamRuby.state()))
       STextView("Me too")
       STextView("I am taller than you") textSize 15.dip // overriding
       SEditText("Yellow input field")
       SButton(R.string.red)
     } padding 20.dip
   }
-  
-  def showToast() : Unit = {
-	  toast("teste")
-  }
-
 }
